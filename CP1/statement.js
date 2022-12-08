@@ -58,6 +58,9 @@ function statement(invoice, plays) {
     } seats)\n`;
     totalAmount += amountFor(perf);
   }
+  for (let perf of invoice.performances) {
+    totalAmount += amountFor(perf);
+  }
   result += `Amount owed is ${usd(totalAmount)}\n`;
   result += `You earned ${totalVolumeCredits()} credits\n`;
   return result;
