@@ -1,6 +1,22 @@
 const createStatementData = require("./createStatementData");
 
-export function htmlStatement(invoice, plays) {
+function statement(invoice, plays) {
+  return renderPlainText(createStatementData(invoice, plays));
+}
+
+function renderPlainText(data) {
+  let result = `Statement for ${data.customer}\n`;
+  for (let perf of data.performances) {
+    result += `  ${perf.play.name}: ${usd(perf.amount)} (${
+      perf.audience
+    } seats)\n`;
+  }
+  result += `Amount owed is ${usd(data.totalAmount)}\n`;
+  result += `You earned ${data.totalVolumeCredits} credits\n`;
+  return result;
+}
+
+function htmlStatement(invoice, plays) {
   return renderHtml(createStatementData(invoice, plays));
 }
 
@@ -18,22 +34,6 @@ function renderHtml(data) {
   return result;
 }
 
-export function statement(invoice, plays) {
-  return renderPlainText(createStatementData(invoice, plays));
-}
-
-function renderPlainText(data, plays) {
-  let result = `Statement for ${data.customer}\n`;
-  for (let perf of data.performances) {
-    result += `  ${perf.play.name}: ${usd(perf.amount)} (${
-      perf.audience
-    } seats)\n`;
-  }
-  result += `Amount owed is ${usd(data.totalAmount)}\n`;
-  result += `You earned ${data.totalVolumeCredits} credits\n`;
-  return result;
-}
-
 function usd(aNumber) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -42,4 +42,7 @@ function usd(aNumber) {
   }).format(aNumber / 100);
 }
 
-module.exports = statement;
+module.exports = {
+  statement: statement,
+  htmlStatement: htmlStatement,
+};
