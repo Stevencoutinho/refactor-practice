@@ -38,7 +38,7 @@ function createPerformanceCalculator(aPerformance, aPlay) {
     case "comedy":
       return new ComedyCalculator(aPerformance, aPlay);
     default:
-      throw new Error(`未知の演劇の種類: ${aPlay.type}`);
+      throw new Error(`unknown type: ${aPlay.type}`);
   }
 }
 
@@ -49,7 +49,7 @@ class PerformanceCalculator {
   }
 
   get amount() {
-    throw new Error("サブクラスの責務");
+    throw new Error("subclass responsibility");
   }
 
   get volumeCredits() {
