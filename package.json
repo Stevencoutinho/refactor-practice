@@ -1,0 +1,23 @@
+{
+  "name": "refactoring-practice",
+  "version": "1.0.0",
+  "description": "リファクタリング 第 2 版を読み進めながら本文のサンプルコードを写経していく。",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./CP4/Province.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevencoutinho/refactoring-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stevencoutinho/refactoring-practice/issues"
+  },
+  "homepage": "https://github.com/Stevencoutinho/refactoring-practice#readme",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
+}
