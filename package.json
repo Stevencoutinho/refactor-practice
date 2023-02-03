@@ -4,7 +4,7 @@
   "description": "リファクタリング 第 2 版を読み進めながら本文のサンプルコードを写経していく。",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./CP4/Province.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
