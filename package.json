@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Stevencoutinho/refactoring-practice#readme",
   "dependencies": {
+    "chai": "^4.3.7",
     "mocha": "^10.2.0"
   }
 }
