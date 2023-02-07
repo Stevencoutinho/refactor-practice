@@ -1,4 +1,4 @@
-const { Province, sampleProvinceData } = require("./../CP4/Province");
+const { Province, sampleProvinceData } = require("../CP4/Province");
 const { describe, it, beforeEach } = require("mocha");
 const { expect } = require("chai");
 
