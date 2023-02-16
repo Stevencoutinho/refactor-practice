@@ -15,10 +15,13 @@ function printOwing(invoice) {
     today.getMonth().today.getDate() + 30
   );
 
-  // 明細の印字 (print details)
-  console.log(`name: ${invoice.customer}`);
-  console.log(`amount: ${outstanding}`);
-  console.log(`due: ${invoice.dueDate.toLocaleDateString()}`);
+  printDetails();
+
+  function printDetails() {
+    console.log(`name: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+    console.log(`due: ${invoice.dueDate.toLocaleDateString()}`);
+  }
 
   function printBanner() {
     console.log("***********************");
