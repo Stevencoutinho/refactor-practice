@@ -15,17 +15,8 @@ function printOwing(invoice) {
     today.getMonth().today.getDate() + 30
   );
 
-  printDetails();
-
-  function printDetails() {
-    console.log(`name: ${invoice.customer}`);
-    console.log(`amount: ${outstanding}`);
-    console.log(`due: ${invoice.dueDate.toLocaleDateString()}`);
-  }
-
-  function printBanner() {
-    console.log("***********************");
-    console.log("**** Customer Owes ****");
-    console.log("***********************");
-  }
+  // 明細の印字 (print details)
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);
+  console.log(`due: ${invoice.dueDate.toLocaleDateString()}`);
 }
