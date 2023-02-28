@@ -7,5 +7,6 @@ function circumference(radius) {
 }
 
 module.exports = {
+  circum,
   circumference,
 };
