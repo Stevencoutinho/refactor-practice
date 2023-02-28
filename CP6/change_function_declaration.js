@@ -1,3 +1,5 @@
+const { assert } = require("chai");
+
 function circumference(radius) {
   return 2 * Math.PI * radius;
 }
@@ -8,6 +10,7 @@ class Book {
   }
 
   zz_addReservation(customer, isPriority) {
+    assert(isPriority === true || isPriority === false);
     this._reservations.push(customer);
   }
 }
