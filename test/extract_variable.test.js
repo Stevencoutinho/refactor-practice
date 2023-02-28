@@ -1,4 +1,4 @@
-const { price, Order } = require("./../CP6/extract_variable");
+const { price, Order } = require("../CP6/extract_variable");
 const { describe, it, beforeEach } = require("mocha");
 const { expect } = require("chai");
 
