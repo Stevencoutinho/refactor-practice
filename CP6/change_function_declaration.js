@@ -4,16 +4,12 @@ function circumference(radius) {
   return 2 * Math.PI * radius;
 }
 
-function inNewEngland(aCustomer) {
-  return xxNEWinNewEngland(aCustomer.address.state);
-}
-
-function xxNEWinNewEngland(stateCode) {
+function inNewEngland(stateCode) {
   return ["MA", "CT", "ME", "VT", "NH", "RI"].includes(stateCode);
 }
 
 const newEnglanders = someCustomers.filter((c) =>
-  xxNEWinNewEngland(c.address.state)
+  inNewEngland(c.address.state)
 );
 
 class Book {
