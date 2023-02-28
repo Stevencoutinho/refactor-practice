@@ -9,6 +9,10 @@ function inNewEngland(aCustomer) {
   return ["MA", "CT", "ME", "VT", "NH", "RI"].includes(stateCode);
 }
 
+function xxNEWinNewEngland(stateCode) {
+  return ["MA", "CT", "ME", "VT", "NH", "RI"].includes(stateCode);
+}
+
 const newEnglanders = someCustomers.filter((c) => inNewEngland(c));
 
 class Book {
