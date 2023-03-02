@@ -11,3 +11,5 @@ function setTitle(arg) {
 result += `<h1>${title()}</h1>`;
 
 setTitle(obj["articleTitle"]);
+
+const coyNm = "Acme Gooseberries";
