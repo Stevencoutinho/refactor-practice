@@ -1,6 +1,6 @@
 const reading = { customer: "ivan", quantity: 10, month: 5, year: 2017 };
 
-class Reading {
+export class Reading {
   constructor(data) {
     this._customer = data.customer;
     this._quantity = data.quantity;
