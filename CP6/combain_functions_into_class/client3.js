@@ -1,5 +1,8 @@
+const { Reading } = require("./combine_functions_into_class");
+
 // client 3
-const aReading = acquireReading();
+const rawReading = acquireReading();
+const aReading = new Reading(rawReading);
 const basicChargeAmount = calculateBaseCharge(aReading);
 
 function calculateBaseCharge(aReading) {
