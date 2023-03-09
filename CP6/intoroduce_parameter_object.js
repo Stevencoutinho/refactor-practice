@@ -12,3 +12,16 @@ const station = {
 function readingsOutsideRange(station, min, max) {
   return station.readings.filter((r) => r.temp < min || r.temp > max);
 }
+
+class NumberRange {
+  constructor(min, max) {
+    this._data = { min: min, max: max };
+  }
+
+  get min() {
+    return this._min;
+  }
+  get max() {
+    return this._max;
+  }
+}
