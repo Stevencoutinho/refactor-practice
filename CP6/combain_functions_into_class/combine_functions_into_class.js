@@ -1,9 +1,5 @@
 const reading = { customer: "ivan", quantity: 10, month: 5, year: 2017 };
 
-export function taxableChargeFn(aReading) {
-  return Math.max(0, aReading.baseCharge - taxThreshold(aReading.year));
-}
-
 export class Reading {
   constructor(data) {
     this._customer = data.customer;
@@ -25,5 +21,8 @@ export class Reading {
   }
   get baseCharge() {
     return baseRate(this.month, this.year) * this.quantity;
+  }
+  get taxableCharge() {
+    return Math.max(0, this.baseCharge - taxThreshold(this.year));
   }
 }
