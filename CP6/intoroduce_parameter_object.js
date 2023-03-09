@@ -25,3 +25,15 @@ class NumberRange {
     return this._max;
   }
 }
+
+// caller
+const range = new NumberRange(
+  operatingPlan.temperatureFloor,
+  operatingPlan.temperatureCeiling
+);
+alerts = readingsOutsideRange(
+  station,
+  operatingPlan.temperatureFloor,
+  operatingPlan.temperatureCeiling,
+  range
+);
