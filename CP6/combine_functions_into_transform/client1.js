@@ -1,3 +1,6 @@
+const { enrichReading } = require("./combine_functions_into_transform");
+
 // client 1
-const aReading = acquireReading();
-const baseCharge = baseRate(aReading.month, aReading.year) * aReading.quantity;
+const rawReading = acquireReading();
+const aReading = enrichReading(rawReading);
+const baseCharge = aReading.baseCharge;
