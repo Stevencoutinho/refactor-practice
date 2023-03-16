@@ -16,6 +16,9 @@ class Organization {
     this._data = data;
   }
 
+  get name() {
+    return this._data.name;
+  }
   set name(aString) {
     this._data.name = aString;
   }
