@@ -3,10 +3,6 @@ const organization = new Organization({
   country: "GB",
 });
 
-export function getRawDataOfOrganization() {
-  return organization._data;
-}
-
 export function getOrganization() {
   return organization;
 }
