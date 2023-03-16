@@ -1,4 +1,4 @@
-const customerData = [
+export const customerData = [
   {
     1920: {
       name: "martin",
