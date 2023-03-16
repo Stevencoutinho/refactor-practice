@@ -44,3 +44,9 @@ export function getRawDataOfCustomers() {
 export function setRawDataOfCustomers(arg) {
   customerData = arg;
 }
+
+class CustomerData {
+  constructor(data) {
+    this._data = data;
+  }
+}
