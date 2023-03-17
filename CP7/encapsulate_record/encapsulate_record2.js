@@ -58,6 +58,10 @@ class CustomerData {
     return _.cloneDeep(this._data);
   }
 
+  usage(customerID, year, month) {
+    return this._data[customerID].usages[year][month];
+  }
+
   setUsage(customerID, year, month, amount) {
     this._data[customerID].usages[year][month] = amount;
   }
