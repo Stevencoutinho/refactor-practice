@@ -15,7 +15,7 @@ export class Person {
   }
 }
 
-class Course {
+export class Course {
   constructor(name, isAdvanced) {
     this._name = name;
     this._isAdvanced = isAdvanced;
