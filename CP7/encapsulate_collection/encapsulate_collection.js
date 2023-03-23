@@ -1,4 +1,4 @@
-class Person {
+export class Person {
   constructor(name) {
     this._name = name;
     this._courses = [];
