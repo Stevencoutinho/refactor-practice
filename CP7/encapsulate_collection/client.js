@@ -7,5 +7,5 @@ const basicCourseNames = readBasicCourseNames("hoge");
 aPerson.courses = basicCourseNames.map((name) => new Course(name, false));
 
 for (const name of readBasicCourseNames("hoge")) {
-  aPerson.courses.push(new Course(name, false));
+  aPerson.addCourse(new Course(name, false));
 }
