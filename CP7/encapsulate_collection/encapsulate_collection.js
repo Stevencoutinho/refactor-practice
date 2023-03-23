@@ -11,7 +11,7 @@ export class Person {
     return this._courses;
   }
   set courses(aList) {
-    this._courses = aList;
+    this._courses = aList.slice();
   }
 
   addCourse(aCourse) {
