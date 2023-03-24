@@ -1,10 +1,10 @@
 const { Order } = require("./replace_primitive_with_object");
 
 const orders = [
-  { priority: "high" },
-  { priority: "high" },
-  { priority: "rush" },
-  { priority: "low" },
+  new Order({ priority: "high" }),
+  new Order({ priority: "high" }),
+  new Order({ priority: "low" }),
+  new Order({ priority: "rush" }),
 ];
 
 const highPriorityCont = orders.filter(
