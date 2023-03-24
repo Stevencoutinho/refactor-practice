@@ -8,5 +8,5 @@ const orders = [
 ];
 
 const highPriorityCont = orders.filter(
-  (o) => "high" === o.priority || "rush" === o.priority
+  (o) => "high" === o.priorityString || "rush" === o.priorityString
 ).length;
