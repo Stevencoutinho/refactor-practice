@@ -4,7 +4,7 @@ export class Order {
     // 初期化が続く
   }
 
-  get priority() {
+  get priorityString() {
     return this._priority.toString();
   }
   set priority(aString) {
