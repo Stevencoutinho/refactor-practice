@@ -10,4 +10,8 @@ class Order {
     if (basePrice > 1000) discountFactor -= 0.03;
     return basePrice * discountFactor;
   }
+
+  get basePrice() {
+    return this._quantity * this._item.price;
+  }
 }
