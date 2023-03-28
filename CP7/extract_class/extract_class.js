@@ -13,10 +13,10 @@ class Person {
     return `(${this.officeAreaCode}) ${this.officeNumber}`;
   }
   get officeAreaCode() {
-    return this._officeAreaCode;
+    return this._telephoneNumber.officeAreaCode;
   }
   set officeAreaCode(arg) {
-    this._officeAreaCode = arg;
+    this._telephoneNumber.officeAreaCode = arg;
   }
   get officeNumber() {
     return this._officeNumber;
