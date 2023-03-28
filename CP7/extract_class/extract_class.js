@@ -39,4 +39,7 @@ class TelephoneNumber {
   set officeNumber(arg) {
     this._officeNumber = arg;
   }
+  get telephoneNumber() {
+    return `(${this.officeAreaCode}) ${this.officeNumber}`;
+  }
 }
