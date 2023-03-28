@@ -10,7 +10,7 @@ class Person {
     this._name = arg;
   }
   get telephoneNumber() {
-    return `(${this.officeAreaCode}) ${this.officeNumber}`;
+    return this._telephoneNumber.telephoneNumber;
   }
   get officeAreaCode() {
     return this._telephoneNumber.officeAreaCode;
