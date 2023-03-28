@@ -13,30 +13,30 @@ class Person {
     return this._telephoneNumber.telephoneNumber;
   }
   get officeAreaCode() {
-    return this._telephoneNumber.officeAreaCode;
+    return this._telephoneNumber.areaCode;
   }
   set officeAreaCode(arg) {
-    this._telephoneNumber.officeAreaCode = arg;
+    this._telephoneNumber.areaCode = arg;
   }
   get officeNumber() {
-    return this._telephoneNumber.officeNumber;
+    return this._telephoneNumber.number;
   }
   set officeNumber(arg) {
-    this._telephoneNumber.officeNumber = arg;
+    this._telephoneNumber.number = arg;
   }
 }
 
 class TelephoneNumber {
-  get officeAreaCode() {
+  get areaCode() {
     return this._officeAreaCode;
   }
-  set officeAreaCode(arg) {
+  set areaCode(arg) {
     this._officeAreaCode = arg;
   }
-  get officeNumber() {
+  get number() {
     return this._officeNumber;
   }
-  set officeNumber(arg) {
+  set number(arg) {
     this._officeNumber = arg;
   }
   get telephoneNumber() {
