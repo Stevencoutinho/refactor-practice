@@ -21,3 +21,5 @@ class Person {
     this._officeNumber = arg;
   }
 }
+
+class TelephoneNumber {}
