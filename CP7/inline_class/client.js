@@ -5,4 +5,4 @@ const aShipment = new Shipment({
   trackingNumber: 12345,
 });
 
-aShipment.trackingInformation.shippingCompany = "Foo";
+aShipment.shippingCompany = "Foo";
