@@ -1,4 +1,9 @@
 class TrackingInformation {
+  constructor(data) {
+    this._shippingCompany = data.shippingCompany;
+    this._trackingNumber = data.trackingNumber;
+  }
+
   get shippingCompany() {
     return this._shippingCompany;
   }
@@ -17,6 +22,13 @@ class TrackingInformation {
 }
 
 class Shipment {
+  constructor(data) {
+    this._trackingInformation = new TrackingInformation({
+      shippingCompany: data.shippingCompany,
+      trackingNumber: data.trackingNumber,
+    });
+  }
+
   get trackingInfo() {
     return this._trackingInformation.display;
   }
