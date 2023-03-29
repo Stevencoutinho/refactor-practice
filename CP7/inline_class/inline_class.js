@@ -21,7 +21,7 @@ class TrackingInformation {
   }
 }
 
-class Shipment {
+export class Shipment {
   constructor(data) {
     this._trackingInformation = new TrackingInformation({
       shippingCompany: data.shippingCompany,
