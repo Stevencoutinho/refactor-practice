@@ -23,10 +23,8 @@ class TrackingInformation {
 
 export class Shipment {
   constructor(data) {
-    this._trackingInformation = new TrackingInformation({
-      shippingCompany: data.shippingCompany,
-      trackingNumber: data.trackingNumber,
-    });
+    this._shippingCompany = data.shippingCompany;
+    this._trackingNumber = data.trackingNumber;
   }
 
   get trackingInfo() {
@@ -38,7 +36,16 @@ export class Shipment {
   set trackingInformation(aTrackingInformation) {
     this._trackingInformation = aTrackingInformation;
   }
+  get shippingCompany() {
+    return this._shippingCompany;
+  }
   set shippingCompany(arg) {
     this._trackingInformation.shippingCompany = arg;
+  }
+  get trackingNumber() {
+    return this._trackingNumber;
+  }
+  set trackingNumber(arg) {
+    this._trackingNumber = arg;
   }
 }
