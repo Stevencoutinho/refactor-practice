@@ -1,3 +1,5 @@
+const manager = aPerson.department.manager;
+
 class Person {
   constructor(name) {
     this._name = name;
