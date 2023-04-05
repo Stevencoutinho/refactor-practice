@@ -1,4 +1,4 @@
-const manager = aPerson.manager;
+const manager = aPerson.department.manager;
 
 class Person {
   get manager() {
