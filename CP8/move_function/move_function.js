@@ -28,3 +28,11 @@ function trackSummary(points) {
     return 100;
   }
 }
+
+function top_calculateDistance() {
+  let result = 0;
+  for (let i; i < points.length; i++) {
+    result += distance(points[i - 1], points[i]);
+  }
+  return result;
+}
