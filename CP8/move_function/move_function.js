@@ -29,7 +29,7 @@ function trackSummary(points) {
   }
 }
 
-function top_calculateDistance() {
+function top_calculateDistance(points) {
   let result = 0;
   for (let i; i < points.length; i++) {
     result += distance(points[i - 1], points[i]);
