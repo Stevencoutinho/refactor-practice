@@ -3,6 +3,7 @@ class Account {
     this._number = number;
     this._type = type;
     this._interestRate = interestRate;
+    assert(interestRate === this._type.interestRate);
   }
   get interestRate() {
     return this._interestRate;
