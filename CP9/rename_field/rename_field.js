@@ -18,6 +18,6 @@ class Organization {
 }
 
 const organization = new Organization({
-  name: "Acme Gooseberries",
+  title: "Acme Gooseberries",
   country: "GB",
 });
