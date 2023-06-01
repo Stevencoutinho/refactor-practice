@@ -1,9 +1,12 @@
 function disabilityAmount(anEmployee) {
-  if (
-    anEmployee.seniority < 2 ||
-    anEmployee.monthsDisabled > 12 ||
-    anEmployee.isPartTime
-  )
-    return 0;
+  if (isNotEligibleForDisability()) return 0;
   // 障がい手当を計算する
+
+  function isNotEligibleForDisability() {
+    return (
+      anEmployee.seniority < 2 ||
+      anEmployee.monthsDisabled > 12 ||
+      anEmployee.isPartTime
+    );
+  }
 }
