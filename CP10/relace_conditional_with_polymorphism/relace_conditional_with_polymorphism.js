@@ -7,12 +7,10 @@ function speeds(birds) {
 }
 
 function plumage(bird) {
-  // return new Bird(bird).plumage;
   return createBird(bird).plumage;
 }
 
 function airSpeedVelocity(bird) {
-  // return new Bird(bird).airSpeedVelocity;
   return createBird(bird).airSpeedVelocity;
 }
 
