@@ -29,6 +29,19 @@ function createBird(bird) {
   }
 }
 
+class Bird {
+  constructor(birdObject) {
+    Object.assign(this, birdObject);
+  }
+
+  get plumage() {
+    return "unknown";
+  }
+  get airSpeedVelocity() {
+    return null;
+  }
+}
+
 class EuropeanSwallow extends Bird {
   get plumage() {
     return "average";
@@ -53,18 +66,5 @@ class NorwegianBlueParrot extends Bird {
   }
   get airSpeedVelocity() {
     return this.isNailed ? 0 : 10 + this.voltage / 10;
-  }
-}
-
-class Bird {
-  constructor(birdObject) {
-    Object.assign(this, birdObject);
-  }
-
-  get plumage() {
-    return "unknown";
-  }
-  get airSpeedVelocity() {
-    return null;
   }
 }
