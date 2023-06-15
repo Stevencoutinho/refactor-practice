@@ -12,14 +12,6 @@ function speeds(birds) {
   );
 }
 
-function plumage(bird) {
-  return createBird(bird).plumage;
-}
-
-function airSpeedVelocity(bird) {
-  return createBird(bird).airSpeedVelocity;
-}
-
 function createBird(bird) {
   switch (bird.type) {
     case "EuropeanSwallow":
