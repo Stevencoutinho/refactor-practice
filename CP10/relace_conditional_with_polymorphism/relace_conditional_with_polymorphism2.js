@@ -80,4 +80,7 @@ class ExperiencedChinaRating extends Rating {
     if (this.voyage.length > 18) result -= 1;
     return result;
   }
+  get historyLengthFactor() {
+    return this.history.length > 10 ? 1 : 0;
+  }
 }
