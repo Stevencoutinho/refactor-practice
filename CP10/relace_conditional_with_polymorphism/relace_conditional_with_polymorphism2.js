@@ -59,6 +59,9 @@ class Rating {
     if (this.voyage.length > 14) result -= 1;
     return result;
   }
+  get historyLengthFactor() {
+    return this.history.length > 8 ? 1 : 0;
+  }
   get hasChinaHistory() {
     return this.history.some((v) => "china" === v.zone);
   }
