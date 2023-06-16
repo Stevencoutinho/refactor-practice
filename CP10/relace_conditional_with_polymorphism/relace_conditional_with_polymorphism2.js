@@ -8,6 +8,14 @@ const history = [
 ];
 const myRating = rating(voyage, history);
 
+function createRating(voyage, history) {
+  if (voyage.zone === "china" && history.some((v) => "china" === v.zone)) {
+    return new ExperiencedChinaRating(voyage, history);
+  } else {
+    return new Rating(voyage, history);
+  }
+}
+
 function rating(voyage, history) {
   return new rating(voyage, history).value;
 }
