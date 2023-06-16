@@ -67,4 +67,9 @@ class Rating {
   }
 }
 
-class ExperiencedChinaRating extends Rating {}
+class ExperiencedChinaRating extends Rating {
+  get captainHistoryRisk() {
+    const result = super.captainHistoryRisk - 2;
+    return Math.max(result, 0);
+  }
+}
