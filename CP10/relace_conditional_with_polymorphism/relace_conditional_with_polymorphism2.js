@@ -17,7 +17,7 @@ function createRating(voyage, history) {
 }
 
 function rating(voyage, history) {
-  return new rating(voyage, history).value;
+  return createRating(voyage, history).value;
 }
 
 class Rating {
