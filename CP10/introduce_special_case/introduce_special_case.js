@@ -13,12 +13,6 @@ const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
 // client 5
 const name = aCustomer.isUnknown ? "unknown occupant" : aCustomer.name;
 
-function isUnknown(arg) {
-  if (!(arg instanceof Customer || arg instanceof UnknownCustomer))
-    throw new Error(`不正な値について要調査: <${arg}>`);
-  return arg.isUnknown;
-}
-
 class Site {
   get customer() {
     return this._customer === "unknown"
