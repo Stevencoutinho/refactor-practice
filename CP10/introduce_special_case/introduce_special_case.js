@@ -61,3 +61,9 @@ class UnknownCustomer {
     return true;
   }
 }
+
+class NullPaymentHistory {
+  get weeksDelinquentInLastYear() {
+    return 0;
+  }
+}
