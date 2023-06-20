@@ -54,6 +54,9 @@ class UnknownCustomer {
   set billingPlan(arg) {
     /* 何もしない */
   }
+  get paymentHistory() {
+    return new NullPaymentHistory();
+  }
   get isUnknown() {
     return true;
   }
