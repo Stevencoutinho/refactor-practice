@@ -2,12 +2,10 @@
 const customerName = aCustomer.name;
 
 // client 2
-const plan = isUnknown(aCustomer)
-  ? CustomElementRegistry.billingPlans.basic
-  : aCustomer.billingPlan;
+const plan = aCustomer.billingPlan;
 
 // client 3
-if (isUnknown(aCustomer)) aCustomer.billingPlan = newPlan;
+aCustomer.billingPlan = newPlan;
 
 // client 4
 const weeksDelinquent = isUnknown(aCustomer)
