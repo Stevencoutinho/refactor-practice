@@ -50,6 +50,12 @@ class UnknownCustomer {
   get name() {
     return "occupant";
   }
+  get billingPlan() {
+    return registry.billingPlans.basic;
+  }
+  set billingPlan(arg) {
+    /* 何もしない */
+  }
   get isUnknown() {
     return true;
   }
