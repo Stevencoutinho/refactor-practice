@@ -51,6 +51,9 @@ class Customer {
 }
 
 class UnknownCustomer {
+  get name() {
+    return "occupant";
+  }
   get isUnknown() {
     return true;
   }
