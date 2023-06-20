@@ -2,23 +2,21 @@
 const aCustomer = site.customer;
 // 省略...
 let customerName;
-if (aCustomer === "unknown") customerName = "occupant";
+if (isUnknown(aCustomer)) customerName = "occupant";
 else customerName = aCustomer.name;
 
 // client 2
-const plan =
-  aCustomer === "unknown"
-    ? CustomElementRegistry.billingPlans.basic
-    : aCustomer.billingPlan;
+const plan = isUnknown(aCustomer)
+  ? CustomElementRegistry.billingPlans.basic
+  : aCustomer.billingPlan;
 
 // client 3
-if (aCustomer !== "unknown") aCustomer.billingPlan = newPlan;
+if (isUnknown(aCustomer)) aCustomer.billingPlan = newPlan;
 
 // client 4
-const weeksDelinquent =
-  aCustomer === "unknown"
-    ? 0
-    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = isUnknown(aCustomer)
+  ? 0
+  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 function isUnknown(arg) {
   if (!(arg instanceof Customer || arg === "unknown"))
