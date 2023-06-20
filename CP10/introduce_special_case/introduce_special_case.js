@@ -11,7 +11,7 @@ aCustomer.billingPlan = newPlan;
 const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 // client 5
-const name = !isUnknown(aCustomer) ? aCustomer.name : "unknown occupant";
+const name = aCustomer.isUnknown ? "unknown occupant" : aCustomer.name;
 
 function isUnknown(arg) {
   if (!(arg instanceof Customer || arg instanceof UnknownCustomer))
