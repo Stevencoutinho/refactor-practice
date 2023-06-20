@@ -43,3 +43,9 @@ class Customer {
     return false;
   }
 }
+
+class UnknownCustomer {
+  get isUnknown() {
+    return true;
+  }
+}
