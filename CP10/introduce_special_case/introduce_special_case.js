@@ -8,9 +8,7 @@ const plan = aCustomer.billingPlan;
 aCustomer.billingPlan = newPlan;
 
 // client 4
-const weeksDelinquent = isUnknown(aCustomer)
-  ? 0
-  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 function isUnknown(arg) {
   if (!(arg instanceof Customer || arg instanceof UnknownCustomer))
