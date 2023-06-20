@@ -1,18 +1,3 @@
-// client 1
-const customerName = aCustomer.name;
-
-// client 2
-const plan = aCustomer.billingPlan;
-
-// client 3
-aCustomer.billingPlan = newPlan;
-
-// client 4
-const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
-
-// client 5
-const name = aCustomer.isUnknown ? "unknown occupant" : aCustomer.name;
-
 class Site {
   get customer() {
     return this._customer === "unknown"
@@ -62,3 +47,18 @@ class NullPaymentHistory {
     return 0;
   }
 }
+
+// client 1
+const customerName = aCustomer.name;
+
+// client 2
+const plan = aCustomer.billingPlan;
+
+// client 3
+aCustomer.billingPlan = newPlan;
+
+// client 4
+const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
+
+// client 5
+const name = aCustomer.isUnknown ? "unknown occupant" : aCustomer.name;
