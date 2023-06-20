@@ -20,6 +20,12 @@ const weeksDelinquent =
     ? 0
     : aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
+function isUnknown(arg) {
+  if (!(arg instanceof Customer || arg === "unknown"))
+    throw new Error(`不正な値について要調査: <${arg}>`);
+  return arg === "unknown";
+}
+
 class Site {
   get customer() {
     return this._customer;
