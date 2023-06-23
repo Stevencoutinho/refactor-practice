@@ -20,6 +20,10 @@ const record2 = {
   customer: "unknown",
 };
 
+function isUnknown(aCustomer) {
+  return aCustomer === "unknown";
+}
+
 // client 1
 const rawSite = acquireSiteData();
 const site = enrichSite(rawSite);
