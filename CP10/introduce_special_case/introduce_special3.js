@@ -19,3 +19,23 @@ const record2 = {
   // 場所についての詳細が続く
   customer: "unknown",
 };
+
+// client 1
+const site = acquireSiteData();
+const aCustomer = site.customer;
+// ... 大量のコードが入る ...
+let customerName;
+if (aCustomer === "unknown") customerName = "occupant";
+else customerName = aCustomer.name;
+
+// client 2
+const plan =
+  aCustomer === "unknown"
+    ? CustomElementRegistry.billingPlans.basic
+    : aCustomer.billingPlan;
+
+// client 3
+const weeksDelinquent =
+  aCustomer === "unknown"
+    ? 0
+    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
