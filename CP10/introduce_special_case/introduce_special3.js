@@ -20,6 +20,10 @@ const record2 = {
   customer: "unknown",
 };
 
+function isUnknown(aCustomer) {
+  return aCustomer === "unknown";
+}
+
 function enrichSite(aSite) {
   const result = _.cloneDeep(aSite);
   const unknownCustomer = {
@@ -29,10 +33,6 @@ function enrichSite(aSite) {
   if (isUnknown(result.customer)) result.customer = unknownCustomer;
   else result.customer.isUnknown = false;
   return result;
-}
-
-function isUnknown(aCustomer) {
-  return aCustomer === "unknown";
 }
 
 // client 1
