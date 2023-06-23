@@ -21,12 +21,17 @@ const record2 = {
 };
 
 // client 1
-const site = acquireSiteData();
+const rawSite = acquireSiteData();
+const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 // ... 大量のコードが入る ...
 let customerName;
 if (aCustomer === "unknown") customerName = "occupant";
 else customerName = aCustomer.name;
+
+function enrichSite(inputSite) {
+  return _.cloneDeep(inputSite);
+}
 
 // client 2
 const plan =
