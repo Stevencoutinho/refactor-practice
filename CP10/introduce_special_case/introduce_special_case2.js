@@ -27,6 +27,7 @@ class Customer {
 function createUnknownCustomer() {
   return {
     isUnknown: true,
+    name: "occupant",
   };
 }
 
