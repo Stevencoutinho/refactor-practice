@@ -1,6 +1,8 @@
 class Site {
   get customer() {
-    return this._customer;
+    return this._customer === "unknown"
+      ? createUnknownCustomer()
+      : this._customer;
   }
 }
 
@@ -29,7 +31,7 @@ function createUnknownCustomer() {
 }
 
 function isUnknown(arg) {
-  return arg === "unknown";
+  return arg.isUnknown;
 }
 
 // client 1
