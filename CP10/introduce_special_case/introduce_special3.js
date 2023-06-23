@@ -30,7 +30,7 @@ const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 // ... 大量のコードが入る ...
 let customerName;
-if (aCustomer === "unknown") customerName = "occupant";
+if (isUnknown(aCustomer)) customerName = "occupant";
 else customerName = aCustomer.name;
 
 function enrichSite(inputSite) {
@@ -38,13 +38,11 @@ function enrichSite(inputSite) {
 }
 
 // client 2
-const plan =
-  aCustomer === "unknown"
-    ? CustomElementRegistry.billingPlans.basic
-    : aCustomer.billingPlan;
+const plan = isUnknown(aCustomer)
+  ? CustomElementRegistry.billingPlans.basic
+  : aCustomer.billingPlan;
 
 // client 3
-const weeksDelinquent =
-  aCustomer === "unknown"
-    ? 0
-    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = isUnknown(aCustomer)
+  ? 0
+  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
