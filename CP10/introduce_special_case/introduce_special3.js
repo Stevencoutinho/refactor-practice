@@ -20,8 +20,15 @@ const record2 = {
   customer: "unknown",
 };
 
-function enrichSite(inputSite) {
-  return _.cloneDeep(inputSite);
+function enrichSite(aSite) {
+  const result = _.cloneDeep(aSite);
+  const unknownCustomer = {
+    isUnknown: true,
+  };
+
+  if (isUnknown(result.customer)) result.customer = unknownCustomer;
+  else result.customer.isUnknown = false;
+  return result;
 }
 
 function isUnknown(aCustomer) {
