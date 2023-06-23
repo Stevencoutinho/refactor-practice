@@ -21,7 +21,8 @@ const record2 = {
 };
 
 function isUnknown(aCustomer) {
-  return aCustomer === "unknown";
+  if (aCustomer === "unknown") return true;
+  else return aCustomer.isUnknown;
 }
 
 function enrichSite(aSite) {
