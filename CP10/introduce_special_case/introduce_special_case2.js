@@ -22,6 +22,12 @@ class Customer {
   }
 }
 
+function createUnknownCustomer() {
+  return {
+    isUnknown: true,
+  };
+}
+
 // client 1
 const aCustomer = site.customer;
 // 省略...
