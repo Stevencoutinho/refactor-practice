@@ -25,4 +25,5 @@ function findMiscreant(people) {
 }
 
 // client
-const found = alertForMiscreant(people);
+const found = findMiscreant(people);
+alertForMiscreant(people);
