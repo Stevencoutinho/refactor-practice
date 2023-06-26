@@ -23,3 +23,6 @@ function findMiscreant(people) {
   }
   return "";
 }
+
+// client
+const found = alertForMiscreant(people);
