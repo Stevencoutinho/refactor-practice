@@ -20,7 +20,8 @@ function regularDeliveryDate(anOrder) {
 }
 
 // client1
-aShipment.deliveryDate = deliveryDate(anOrder, true);
+aShipment.deliveryDate = rushDeliveryDate(anOrder);
 
 // client2
-aShipment.deliveryDate = deliveryDate(anOrder, false);
+const isRush = determineIfRush(anOrder);
+aShipment.deliveryDate = deliveryDate(anOrder, isRush);
