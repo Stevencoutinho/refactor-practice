@@ -28,6 +28,10 @@ function rushDeliveryDate(anOrder) {
   return anOrder.placedOn.plusDays(1 + deliveryTime);
 }
 
+function rushDeliveryDate2(anOrder) {
+  return deliveryDate2(anOrder, true);
+}
+
 function regularDeliveryDate(anOrder) {
   let deliveryTime;
   if (["MA", "CT", "NY"].includes(anOrder.deliveryState)) deliveryTime = 2;
@@ -36,6 +40,9 @@ function regularDeliveryDate(anOrder) {
   return anOrder.placedOn.plusDays(2 + deliveryTime);
 }
 
+function regularDeliveryDate2(anOrder) {
+  return deliveryDate2(anOrder, false);
+}
 // client1
 aShipment.deliveryDate = rushDeliveryDate(anOrder);
 
