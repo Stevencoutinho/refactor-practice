@@ -1,6 +1,9 @@
 class HeatingPlan {
   xxNEWwithinRange(aNumberRange) {
-    return this.withinRange(aNumberRange.low, aNumberRange.high);
+    return (
+      aNumberRange.low >= this.temperatureRange.low &&
+      aNumberRange.high <= temperatureRange.high
+    );
   }
   withinRange(bottom, top) {
     return (
