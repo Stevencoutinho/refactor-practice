@@ -1,4 +1,8 @@
 class Person {
+  constructor(id) {
+    this.id = id;
+  }
+
   get name() {
     return this._name;
   }
