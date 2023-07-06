@@ -12,3 +12,7 @@ class Person {
     this._id = arg;
   }
 }
+
+const martin = new Person();
+martin.name = "martin";
+martin.id = "1234";
