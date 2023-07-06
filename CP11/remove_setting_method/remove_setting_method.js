@@ -17,6 +17,5 @@ class Person {
   }
 }
 
-const martin = new Person();
+const martin = new Person("1234");
 martin.name = "martin";
-martin.id = "1234";
