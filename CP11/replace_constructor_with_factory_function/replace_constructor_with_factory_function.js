@@ -15,6 +15,10 @@ class Employee {
   }
 }
 
+function createEmployee(name, typeCode) {
+  return new Employee(name, typeCode);
+}
+
 // caller
 const candidate = new Employee(document.name, document.empType);
 
