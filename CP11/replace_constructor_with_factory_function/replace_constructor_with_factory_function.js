@@ -14,3 +14,9 @@ class Employee {
     return { E: "Engineer", M: "Manager", S: "Salesman" };
   }
 }
+
+// caller
+const candidate = new Employee(document.name, document.empType);
+
+// caller2
+const leadEngineer = new Employee(document.leadEngineer, "E");
