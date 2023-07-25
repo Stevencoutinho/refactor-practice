@@ -20,7 +20,7 @@ function createEmployee(name, typeCode) {
 }
 
 // caller
-const candidate = new Employee(document.name, document.empType);
+const candidate = createEmployee(document.name, document.empType);
 
 // caller2
 const leadEngineer = new Employee(document.leadEngineer, "E");
