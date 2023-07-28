@@ -12,3 +12,6 @@ class ChargeCalculator {
     return this._baseCharge + this._provider.connectionCharge;
   }
 }
+
+// caller
+const monthCharge = new ChargeCalculator(customer, usage, provider).charge;
