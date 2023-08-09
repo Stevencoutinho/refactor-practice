@@ -8,6 +8,9 @@ class Employee {
   assignCar() {
     /* ... */
   }
+  finishConstruction() {
+    if (this._isPrivileged) this.assignCar();
+  }
 }
 
 class Manager extends Employee {
