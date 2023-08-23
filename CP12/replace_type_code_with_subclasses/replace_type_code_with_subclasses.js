@@ -23,6 +23,18 @@ class Engineer extends Employee {
   }
 }
 
+class Salesman extends Employee {
+  get type() {
+    return "salesman";
+  }
+}
+
+class Manager extends Employee {
+  get type() {
+    return "manager";
+  }
+}
+
 function createEmployee(name, type) {
   switch (type) {
     case "engineer":
