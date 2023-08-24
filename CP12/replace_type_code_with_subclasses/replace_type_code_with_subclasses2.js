@@ -1,12 +1,3 @@
-class EmployeeType {
-  constructor(aString) {
-    this._value = aString;
-  }
-  toString() {
-    return this._value;
-  }
-}
-
 class Employee {
   constructor(name, type) {
     this.validateType(type);
@@ -25,7 +16,7 @@ class Employee {
     return this._type;
   }
   set type(arg) {
-    this._type = arg;
+    this._type = Employee.createEmployeeType(arg);
   }
   get capitalizedType() {
     return (
@@ -35,5 +26,37 @@ class Employee {
   }
   toString() {
     return `${this._name} (${this.capitalizedType})`;
+  }
+  static createEmployeeType(aString) {
+    switch (aString) {
+      case "engineer":
+        return new Engineer();
+      case "manager":
+        return new Manager();
+      case "salesman":
+        return new Salesman();
+      default:
+        throw new Error(`従業員のタイプコードが不正: ${aString}`);
+    }
+  }
+}
+
+class EmployeeType {}
+
+class Engineer extends Employee {
+  toString() {
+    return "engineer";
+  }
+}
+
+class Manager extends Employee {
+  toString() {
+    return "manager";
+  }
+}
+
+class Salesman extends Employee {
+  toString() {
+    return "salesman";
   }
 }
