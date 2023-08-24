@@ -8,6 +8,9 @@ class Person {
   get genderCode() {
     return "X";
   }
+  get isMale() {
+    return this instanceof Male;
+  }
   // 後は省略
 }
 
@@ -55,4 +58,4 @@ function isMale(aPerson) {
 }
 
 // client
-const numberOfMales = people.filter((p) => isMale(p)).length;
+const numberOfMales = people.filter((p) => p.isMale).length;
