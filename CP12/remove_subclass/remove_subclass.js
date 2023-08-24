@@ -15,24 +15,6 @@ class Person {
   // 後は省略
 }
 
-class Female extends Person {
-  get genderCode() {
-    return "F";
-  }
-}
-
-function createPerson(name) {
-  return new Person(name);
-}
-
-function createMale(name) {
-  return new Male(name);
-}
-
-function createFemale(name) {
-  return new Female(name);
-}
-
 function createPerson(aRecord) {
   switch (aRecord.gender) {
     case "M":
@@ -46,10 +28,6 @@ function createPerson(aRecord) {
 
 function loadFromInput(data) {
   return data.map((aRecord) => createPerson(aRecord));
-}
-
-function isMale(aPerson) {
-  return aPerson instanceof Male;
 }
 
 // client
