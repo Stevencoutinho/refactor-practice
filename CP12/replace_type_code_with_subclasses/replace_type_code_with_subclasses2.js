@@ -25,7 +25,7 @@ class Employee {
     );
   }
   toString() {
-    return `${this._name} (${this.capitalizedType})`;
+    return `${this._name} (${this.type.capitalizedName})`;
   }
   static createEmployeeType(aString) {
     switch (aString) {
@@ -41,7 +41,14 @@ class Employee {
   }
 }
 
-class EmployeeType {}
+class EmployeeType {
+  get capitalizedName() {
+    return (
+      this.toString().charAt(0).toUpperCase() +
+      this.toString().substr(1).toLowerCase()
+    );
+  }
+}
 
 class Engineer extends Employee {
   toString() {
