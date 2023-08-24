@@ -23,5 +23,17 @@ class Female extends Person {
   }
 }
 
+function createPerson(name) {
+  return new Person(name);
+}
+
+function createMale(name) {
+  return new Male(name);
+}
+
+function createFemale(name) {
+  return new Female(name);
+}
+
 // client
 const numberOfMales = people.filter((p) => p instanceof Male).length;
