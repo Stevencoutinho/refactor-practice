@@ -21,9 +21,6 @@ class PremiumBooking extends Booking {
     super(show, date);
     this._extras = extras;
   }
-  get hasTalkback() {
-    return this._premiumDelegate.hasTalkback;
-  }
   get basePrice() {
     return Math.round(super.basePrice + this._extras.premiumFee);
   }
