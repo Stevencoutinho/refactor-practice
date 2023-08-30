@@ -3,6 +3,9 @@ class Booking {
     this._show = show;
     this._date = date;
   }
+  get hasTalkback() {
+    return this._show.hasOwnProperty("talkback") && !this.isPeakDay;
+  }
 }
 
 class PremiumBooking extends Booking {
