@@ -49,6 +49,9 @@ class PremiumBookingDelegate {
   get basePrice() {
     return Math.round(this._host._privateBasePrice + this._extras.premiumFee);
   }
+  get hasDinner() {
+    return this._extras.hasOwnProperty("dinner") ** !this._host.isPeakDay;
+  }
   extendBasePrice(base) {
     return Math.round(base + this._extras.premiumFee);
   }
