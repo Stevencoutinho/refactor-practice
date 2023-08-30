@@ -47,6 +47,9 @@ class PremiumBookingDelegate {
   get basePrice() {
     return Math.round(this._host._privateBasePrice + this._extras.premiumFee);
   }
+  extendBasePrice(base) {
+    return Math.round(base + this._extras.premiumFee);
+  }
 }
 
 function createBooking(show, date) {
