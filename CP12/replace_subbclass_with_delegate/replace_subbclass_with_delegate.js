@@ -13,4 +13,7 @@ class PremiumBooking extends Booking {
     super(show, date);
     this._extras = extras;
   }
+  get hasTalkback() {
+    return this._show.hasOwnProperty("talkback");
+  }
 }
