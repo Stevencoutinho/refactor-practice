@@ -9,9 +9,11 @@ class Booking {
       : this._show.hasOwnProperty("talkback") && !this.isPeakDay;
   }
   get basePrice() {
+    let result = this._show.price;
+    if (this.isPeakDay) result += Math.round(result * 0.15);
     return this._premiumDelegate
-      ? this._premiumDelegate.basePrice
-      : this._privateBasePrice;
+      ? this._premiumDelegate.extendBasePrice(result)
+      : result;
   }
   get _privateBasePrice() {
     let result = this._show.price;
