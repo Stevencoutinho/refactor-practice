@@ -15,6 +15,9 @@ class Booking {
       ? this._premiumDelegate.extendBasePrice(result)
       : result;
   }
+  get hasDinner() {
+    return this._premiumDelegate ? this._premiumDelegate.hasDinner : undefined;
+  }
   get _privateBasePrice() {
     let result = this._show.price;
     if (this.isPeakDay) result += Math.round(result * 0.15);
