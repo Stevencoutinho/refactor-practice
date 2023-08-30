@@ -24,4 +24,7 @@ class PremiumBooking extends Booking {
   get basePrice() {
     return Math.round(super.basePrice + this._extras.premiumFee);
   }
+  get hasDinner() {
+    return this._extras.hasOwnProperty("dinner") && !this.isPeakDay;
+  }
 }
