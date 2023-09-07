@@ -30,6 +30,8 @@ class Bird {
         return new EuropeanSwallowDelegate();
       case "AfricanSwallow":
         return new AfricanSwallowDelegate(data);
+      case "NorwegianBlueParrot":
+        return new NorwegianBlueParrotDelegate(data);
       default:
         return null;
     }
