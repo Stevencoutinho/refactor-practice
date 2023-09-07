@@ -52,6 +52,12 @@ class AfricanSwallow extends Bird {
   }
 }
 
+class AfricanSwallowDelegate {
+  constructor(data) {
+    this._numberOfCoconuts = data.numberOfCoconuts;
+  }
+}
+
 class NorwegianBlueParrot extends Bird {
   constructor(data) {
     super(data);
