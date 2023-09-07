@@ -27,13 +27,13 @@ class Bird {
   selectSpeciesDelegate(data) {
     switch (data.type) {
       case "EuropeanSwallow":
-        return new EuropeanSwallowDelegate();
+        return new EuropeanSwallowDelegate(data, this);
       case "AfricanSwallow":
-        return new AfricanSwallowDelegate(data);
+        return new AfricanSwallowDelegate(data, this);
       case "NorwegianBlueParrot":
         return new NorwegianBlueParrotDelegate(data, this);
       default:
-        return null;
+        return new SpeciesDelegate(data, this);
     }
   }
 }
