@@ -65,3 +65,10 @@ class NorwegianBlueParrot extends Bird {
     return this._isNailed ? 0 : 10 + this._voltage / 10;
   }
 }
+
+class NorwegianBlueParrotDelegate {
+  constructor(data) {
+    this._voltage = data.voltage;
+    this._isNailed = data.isNailed;
+  }
+}
