@@ -38,14 +38,24 @@ class Bird {
   }
 }
 
-class EuropeanSwallowDelegate {
+class SpeciesDelegate {
+  constructor(data, bird) {
+    this._bird;
+  }
+  get plumage() {
+    return this._bird.plumage || "average";
+  }
+}
+
+class EuropeanSwallowDelegate extends SpeciesDelegate {
   get airSpeedVelocity() {
     return 35;
   }
 }
 
-class AfricanSwallowDelegate {
-  constructor(data) {
+class AfricanSwallowDelegate extends SpeciesDelegate {
+  constructor(data, bird) {
+    super(data, bird);
     this._numberOfCoconuts = data.numberOfCoconuts;
   }
   get airSpeedVelocity() {
@@ -67,9 +77,9 @@ class NorwegianBlueParrot extends Bird {
   }
 }
 
-class NorwegianBlueParrotDelegate {
+class NorwegianBlueParrotDelegate extends SpeciesDelegate {
   constructor(data, bird) {
-    this._bird = bird;
+    super(data, bird);
     this._voltage = data.voltage;
     this._isNailed = data.isNailed;
   }
