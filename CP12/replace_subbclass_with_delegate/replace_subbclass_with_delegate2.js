@@ -43,6 +43,9 @@ class SpeciesDelegate {
   get plumage() {
     return this._bird.plumage || "average";
   }
+  get airSpeedVelocity() {
+    return null;
+  }
 }
 
 class EuropeanSwallowDelegate extends SpeciesDelegate {
