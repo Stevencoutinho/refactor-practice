@@ -17,12 +17,10 @@ class Bird {
     return this._name;
   }
   get plumage() {
-    return this._plumage || "average";
+    return this._speciesDelegate.plumage;
   }
   get airSpeedVelocity() {
-    return this._speciesDelegate
-      ? this._speciesDelegate.airSpeedVelocity
-      : null;
+    return this._speciesDelegate.airSpeedVelocity;
   }
   selectSpeciesDelegate(data) {
     switch (data.type) {
