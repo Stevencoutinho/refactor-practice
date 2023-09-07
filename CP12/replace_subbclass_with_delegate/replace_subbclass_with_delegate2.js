@@ -33,6 +33,8 @@ class EuropeanSwallow extends Bird {
   }
 }
 
+class EuropeanSwallowDelegate {}
+
 class AfricanSwallow extends Bird {
   constructor(data) {
     super(data);
